@@ -30,7 +30,7 @@ Connection con = DriverManager.getConnection(url, uid, pw);
 
 String sql2 = "DELETE FROM users WHERE uid=?";
 PreparedStatement pstmt = con.prepareStatement(sql2);
-pstmt.setInt(1,12);
+pstmt.setInt(1,10);
 pstmt.executeUpdate();
 
 con.close();

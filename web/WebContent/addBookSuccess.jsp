@@ -30,6 +30,9 @@ if(genre == null)
 String qty = request.getParameter("qty");
 if(qty == null)
 	qty = "0";
+String borrowed = request.getParameter("borrowed");
+if(borrowed == null)
+	borrowed = "";
 String originalAmt = request.getParameter("originalAmt");
 if(originalAmt == null)
 	originalAmt = "0";
@@ -50,7 +53,7 @@ catch (java.lang.ClassNotFoundException e)
 
     Connection con = DriverManager.getConnection(url, uid, pw);
 
-    String sql2 = "INSERT INTO books VALUES (?,?,?,?,?,?,?)";
+    String sql2 = "INSERT INTO books VALUES (?,?,?,?,?,?,?,?)";
     PreparedStatement pstmt = con.prepareStatement(sql2);
     pstmt.setInt(1,Integer.parseInt(isbn));
     pstmt.setString(2,bookName);
@@ -58,18 +61,12 @@ catch (java.lang.ClassNotFoundException e)
     pstmt.setInt(4,Integer.parseInt(yearpub));
     pstmt.setString(5,genre);
     pstmt.setInt(6,Integer.parseInt(qty));
-    pstmt.setInt(7,Integer.parseInt(originalAmt));
+    pstmt.setString(7,borrowed);
+    pstmt.setInt(8,Integer.parseInt(originalAmt));
     pstmt.executeUpdate();
 
     con.close();
 %>
-<style>
-    .text-c {
-		text-align: center;
-	}
-</style>
-<div class="text-c">
 <a href="login.jsp">Back to Login Page</a>
-</div>
 </body>
 </html>

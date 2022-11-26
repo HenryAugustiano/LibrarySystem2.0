@@ -9,23 +9,12 @@
 </head>
 <body style="background-color:#FFFDD0;">
 
-<style>
-    .text-c {
-		text-align: center;
-	}
-</style>
 
-<div class="text-c">
 <h2>Enter Book you want to remove:</h2>
-<br>
-<br>
 <form method="get" action="removeBookSuccess.jsp">
-    ISBN: <input type="text" name="isbn">
-    <br>
-    <br>
+    ISBN:<br> <input type="text" name="isbn">
     <input type="submit">
 </form>
-</div>
 
 </body>
 </html>

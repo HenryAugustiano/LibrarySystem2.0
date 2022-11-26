@@ -72,7 +72,7 @@ Connection con = DriverManager.getConnection(url, uid, pw);
 // Print out the order summary information
 
 if(!genre.equals("all")){
-	String sql = "SELECT * FROM books WHERE genre=? AND qty>0";
+	String sql = "SELECT * FROM books WHERE genre=?";
 	PreparedStatement pstmt = con.prepareStatement(sql);
 	pstmt.setString(1, genre);
 	ResultSet rst = pstmt.executeQuery();
@@ -87,6 +87,7 @@ if(!genre.equals("all")){
 					<th>Year Published</th>
 					<th>Genre</th>
 					<th>Quantity</th>
+					<th>Borrowed(T/F)</th>
 					<th>Total Amount</th>
 				</tr>
 			<%
@@ -102,12 +103,13 @@ if(!genre.equals("all")){
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("yearPub")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getString("genre")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("qty")%></td>
+					<td style="text-align:center;font-family: Futura;"><%=rst.getString("borrowed")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("originalAmt")%></td>
 				</tr>
 			<%
 	}
 } else{
-	String sql = "SELECT * FROM books WHERE qty>0";
+	String sql = "SELECT * FROM books";
 	PreparedStatement pstmt = con.prepareStatement(sql);
 	ResultSet rst = pstmt.executeQuery();
 
@@ -120,6 +122,7 @@ if(!genre.equals("all")){
 					<th>Year Published</th>
 					<th>Genre</th>
 					<th>Quantity</th>
+					<th>Borrowed(T/F)</th>
 					<th>Total Amount</th>
 				</tr>
 			<%
@@ -135,6 +138,7 @@ while(rst.next()) {
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("yearPub")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getString("genre")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("qty")%></td>
+					<td style="text-align:center;font-family: Futura;"><%=rst.getString("borrowed")%></td>
 					<td style="text-align:center;font-family: Futura;"><%=rst.getInt("originalAmt")%></td>
 				</tr>
 				<%
@@ -144,11 +148,9 @@ while(rst.next()) {
 con.close();
 %>
 <div class="form_pos text-c">
-<h3>Write the complete title of the book you want to borrow (including capital letters on the title):</h3>
+<h3>Write the complete title of the book you want to borrow (including capitalizations):</h3>
 <form method="get" action="borrowBook.jsp">
 <input type="text" name="bookName" size="30">
-<h3>Write your username here:</h3>
-<input type="text" name="uname" size="30">
 <input type="submit" value="Submit"><input type="reset" value="Reset">
 </form>
 </div>

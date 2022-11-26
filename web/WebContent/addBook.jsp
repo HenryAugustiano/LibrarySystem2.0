@@ -8,17 +8,10 @@
 <title>Library</title>
 </head>
 <body style="background-color:#FFFDD0;">
-<style>
-    .text-c {
-		text-align: center;
-	}
-</style>
 
-<div class="text-c">
+
 <h2>Enter Book you want to add:</h2>
-<br>
-<br>
-<form method="get" action="addBookSuccess.jsp">
+<form method="get" action="addBookSuccess.jsp">>
     ISBN:<br> <input type="text" name="isbn">
     <br>
     Book Name:<br> <input type="text" name="bookName">
@@ -31,9 +24,10 @@
     <br>
     qty:<br> <input type="text" name="qty">
     <br>
+    Borrowed:<br> <input type="text" name="borrowed">
+    <br>
     originalAmt:<br> <input type="text" name="originalAmt">
-    <br>
-    <br>
     <input type="submit">
 </form>
-</div>
+
+

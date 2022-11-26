@@ -41,12 +41,14 @@ ResultSet rst = pstmt.executeQuery();
 
 %>
 <table class="styled-table"; border="1" style="border-collapse:collapse;margin-left:auto;margin-right:auto;;font-family: Futura;">
+    <th>
         <tr>
             <th>book1</th>
             <th>book2</th>
             <th>date1</th>
             <th>date2</th>
         </tr>
+    </th>
 <%
 while(rst.next()){
 %>	

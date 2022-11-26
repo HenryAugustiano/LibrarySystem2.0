@@ -50,13 +50,6 @@ pstmt.executeUpdate();
 
 con.close();
 %>
-<style>
-    .text-c {
-		text-align: center;
-	}
-</style>
-<div class="text-c">
 <a href="login.jsp">Back to Login Page</a>
-</div>
 </body>
 </html>
