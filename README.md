@@ -59,3 +59,14 @@ To support users that might not understand how to operate the website, or if the
 6. In version 2 of our program we are no longer using csv for the database. The csv format was causing limitations, and the SQL format allows for better integration.<br/> 
 ![alt text](ReadMeRsc/ddl.png)<br/>
 <br/>
+
+7. PayPal implementation 
+For existing users who borrowed more than 14 days, they will get charged with late fees. This implementation helps for the user to pay the fees rather than paying it using cash(in-person). <br/>
+
+![alt text](ReadMeRsc/paypal.png)<br/>
+<br/>
+
+8. Google Map implementation
+On our main page, we implemented google map (UBCO Library for simplicity purpose) to help users navigate their way to the library.
+
+![alt text](ReadMeRsc/gmap.png)<br/>
