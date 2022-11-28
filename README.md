@@ -61,12 +61,12 @@ To support users that might not understand how to operate the website, or if the
 <br/>
 
 7. PayPal implementation 
-For existing users who borrowed more than 14 days, they will get charged with late fees. This implementation helps for the user to pay the fees rather than paying it using cash(in-person). <br/>
+For existing users who borrowed more than 14 days, they will get charged with late fees. This implementation helps for the user to pay the fees and asve more time rather than paying it using cash(in-person). <br/>
 
 ![alt text](ReadMeRsc/paypal.png)<br/>
 <br/>
 
 8. Google Map implementation
-On our main page, we implemented google map (UBCO Library for simplicity purpose) to help users navigate their way to the library.
+On our main page, we implemented google map (UBCO Library for simplicity purpose) to help users navigate their way to the library. This implementation helps user to find our library location where they can press "direction" in the google map API and find the best route from their location. 
 
 ![alt text](ReadMeRsc/gmap.png)<br/>
